@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
+		<!-- CSS -->
+		<link rel="stylesheet" href="./public/css/reduced.css" />
+
+		<title>Adivina el número</title>
+	</head>
+	<body>
+		<main
+			class="
+				col-12 col-md-10 col-lg-8
+				alto
+				container
+				d-flex
+				justify-content-center
+				align-items-center
+			"
+		>
+			<!-- Game card -->
+
+			<div class="card border text-center">
+				<div class="card-body">
+					<h3 class="text-card">Juego adivina el número</h3>
+
+					<!-- Error alert -->
+
+					<div
+						class="alert alert-danger d-flex align-items-center d-none"
+						id="errorAlert"
+						role="alert"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-alert-triangle me-2"
+							width="40"
+							height="40"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="#ff2825"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<path d="M12 9v2m0 4v.01" />
+							<path
+								d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75"
+							/>
+						</svg>
+						<div class="container-text">
+							<p class="alert-text m-0"></p>
+						</div>
+					</div>
+
+					<!-- Game instructions -->
+
+					<p class="text-card">
+						Hemos seleccionado un número aleatorio entre 1 y 100. Fíjate si lo
+						puedes adivinar en 10 turnos o menos. Vamos a decirte si tu número
+						es más alto o más bajo.
+					</p>
+					<div class="row d-flex align-items-center col-12 m-auto my-2">
+						<div class="col-12 col-md-2">
+							<label class="form-label" for="numberAssumption"
+								>Adivina el número</label
+							>
+						</div>
+						<div class="col-12 col-md-8">
+							<input
+								class="col-auto form-control"
+								type="number"
+								id="numberAssumption"
+							/>
+						</div>
+						<div
+							class="col-12 col-md-2 d-flex justify-content-center margin-top"
+						>
+							<input
+								type="button"
+								value="Enviar"
+								class="btn bg-primary with-90"
+								id="summitAssumption"
+							/>
+						</div>
+					</div>
+					<!-- .card-body -->
+
+					<!-- Help the user -->
+
+					<div class="container help-the-user my-2 d-none">
+						<p class="previous-attempt"></p>
+						<p
+							class="bg-danger text-white card w-100 py-1 px-2 yes-or-not my-2"
+						></p>
+						<p class="low-or-hig"></p>
+					</div>
+
+					<!-- play again -->
+
+					<input
+						type="button"
+						value="Volver a intentar"
+						class="btn bg-primary bg-opacity-75 d-none mt-2"
+						id="playAgain"
+					/>
+				</div>
+				<!-- .card -->
+			</div>
+		</main>
+		<!-- My Scripts -->
+		<script src="./scripts.js"></script>
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Option 2: Separate Popper and Bootstrap JS -->
+		<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+	</body>
+</html>
